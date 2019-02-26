@@ -27,6 +27,7 @@
 // Variables
 bool triggered;
 long duration;
+int distance;
 LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
 int leds[] = {R_PIN, W_PIN, B_PIN};
 int ledssize = sizeof(leds)/sizeof(*leds);
@@ -37,7 +38,7 @@ char notes[] = "GGAGcB GGAGdc GGxecBA yyecdc";
 int beats[] = { 2, 2, 8, 8, 8, 16, 1, 2, 2, 8, 8,8, 16, 1, 2,2,8,8,8,8,16, 1,2,2,8,8,8,16 };
 int tempo = 150;
 
-void setup() {
+void setup() { 
   triggered = false;
   currentled = 0;
 
@@ -53,25 +54,27 @@ void setup() {
   lcd.begin(16, 2);
   
   // "Exit" delay. So you don't set off the "alarm" accidentally
-  //delay(5000);
+  delay(5000);
 }
 
 void loop() {
   // Do nothing until Ultrasonic sensor is triggered
   while(!triggered) {
-    delay(10);
+    //delay(10);
+    digitalWrite(TRIG_PIN, LOW);
+    delayMicroseconds(2);
     
     digitalWrite(TRIG_PIN, HIGH);
     delayMicroseconds(10);
     digitalWrite(TRIG_PIN, LOW);
 
-    duration = pulseIn(ECHO_PIN, HIGH);
-
-    if(duration < 15000){
+    duration = pulseInLong(ECHO_PIN, HIGH, 50000);
+   
+    if(duration < 7000){
       triggered = true;
       writeLCD();
       digitalWrite(BUZZER_PIN, HIGH);
-      delay(1000);
+      delay(2000);
       digitalWrite(BUZZER_PIN, LOW);
     }
   }
