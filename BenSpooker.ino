@@ -59,7 +59,7 @@ void setup() {
 void loop() {
   // Do nothing until Ultrasonic sensor is triggered
   while(!triggered) {
-    delay(250);
+    delay(10);
     
     digitalWrite(TRIG_PIN, HIGH);
     delayMicroseconds(10);
@@ -67,10 +67,12 @@ void loop() {
 
     duration = pulseIn(ECHO_PIN, HIGH);
 
-    if(duration < 1000){
+    if(duration < 15000){
       triggered = true;
       writeLCD();
       digitalWrite(BUZZER_PIN, HIGH);
+      delay(1000);
+      digitalWrite(BUZZER_PIN, LOW);
     }
   }
 
@@ -87,7 +89,6 @@ void loop() {
    digitalWrite(leds[currentled], LOW);
    digitalWrite(leds[(currentled+1)%ledssize], HIGH);
    currentled = (currentled+1)%ledssize;
-   digitalWrite(BUZZER_PIN, LOW);
   }
 }
 
