@@ -26,6 +26,7 @@
 
 // Variables
 bool triggered;
+const int durationLimit = 7000;
 long duration;
 int distance;
 LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
@@ -61,17 +62,10 @@ void loop() {
   // Do nothing until Ultrasonic sensor is triggered
   while(!triggered) {
     //delay(10);
-    digitalWrite(TRIG_PIN, LOW);
-    delayMicroseconds(2);
-    
-    digitalWrite(TRIG_PIN, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(TRIG_PIN, LOW);
+    triggered = checkProximity();
 
-    duration = pulseInLong(ECHO_PIN, HIGH, 50000);
-   
-    if(duration < 7000){
-      triggered = true;
+    if(triggered){
+      //triggered = true;
       writeLCD();
       digitalWrite(BUZZER_PIN, HIGH);
       delay(2000);
@@ -94,6 +88,21 @@ void loop() {
    currentled = (currentled+1)%ledssize;
   }
 }
+
+bool checkProximity() {
+    digitalWrite(TRIG_PIN, LOW);
+    delayMicroseconds(2);
+    
+    digitalWrite(TRIG_PIN, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIG_PIN, LOW);
+
+    if(pulseInLong(ECHO_PIN, HIGH, 50000) < durationLimit) {
+      return true;
+    } else {
+      return false;
+    }
+} 
 
 void writeLCD() {
   lcd.print("HAPPY BIRTHDAY");
@@ -130,4 +139,3 @@ void playNote(char note, int noteDuration) {
     }
   }
 }
-
