@@ -61,7 +61,7 @@ void setup() {
 void loop() {
   // Do nothing until Ultrasonic sensor is triggered
   while(!triggered) {
-    //delay(10);
+    delay(100);
     triggered = checkProximity();
 
     if(triggered){
@@ -97,7 +97,9 @@ bool checkProximity() {
     delayMicroseconds(10);
     digitalWrite(TRIG_PIN, LOW);
 
-    if(pulseInLong(ECHO_PIN, HIGH, 50000) < durationLimit) {
+    float resp = pulseInLong(ECHO_PIN, HIGH);
+
+    if(resp < durationLimit && resp != 0) {
       return true;
     } else {
       return false;
