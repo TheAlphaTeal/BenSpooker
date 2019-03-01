@@ -34,3 +34,6 @@ In the wise words of Ben McMillin,
 
 ### Video
 [Link to video of what Ben saw!](https://twitter.com/AlphaTeal/status/1101280600932134912) I probably should have had the lights off in this video for better effect though...
+
+## Sources
+The code to play "Happy Birthday" on the passive buzzer is not my own. I copied it from [this project on the Arduino Project Hub](https://create.arduino.cc/projecthub/trduunze/piezo-happy-birthday-7ea362) that is licensed under the GNU GPL3+
