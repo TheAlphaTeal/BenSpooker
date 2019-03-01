@@ -25,15 +25,16 @@ In the wise words of Ben McMillin,
 
 > "FUCK!"
 
-## Photos and video
+## Video and photos
+
+### Video
+[Link to video of what Ben saw!](https://twitter.com/AlphaTeal/status/1101280600932134912) I probably should have had the lights off in this video for better effect though...
+
 ### DrakeBot in action, after triggering
 ![DrakeBot in action](https://imgur.com/ikR37Ho.jpg "DrakeBot in action")
 
 ### Better lighting to see all components
 ![Components](https://imgur.com/WQu0Bfb.jpg "Components")
-
-### Video
-[Link to video of what Ben saw!](https://twitter.com/AlphaTeal/status/1101280600932134912) I probably should have had the lights off in this video for better effect though...
 
 ## Sources
 The code to play "Happy Birthday" on the passive buzzer is not my own. I copied it from [this project on the Arduino Project Hub](https://create.arduino.cc/projecthub/trduunze/piezo-happy-birthday-7ea362) that is licensed under the GNU GPL3+
