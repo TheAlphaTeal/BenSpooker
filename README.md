@@ -26,8 +26,8 @@ In the wise words of Ben McMillin,
 > "FUCK!"
 
 ## Photos and video
-![DrakeBot in action](https://imgur.com/ikR37Ho)
+![DrakeBot in action](https://imgur.com/ikR37Ho.jpg "DrakeBot in action")
 ### DrakeBot in action, after triggering
-![Components](https://imgur.com/WQu0Bfb)
+![Components](https://imgur.com/WQu0Bfb.jpg "Components")
 ### Better lighting to see all components
 [Link to video of what Ben saw!](https://twitter.com/AlphaTeal/status/1101280600932134912) I probably should have had the lights off in this video for better effect though...
