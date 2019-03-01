@@ -32,4 +32,5 @@ In the wise words of Ben McMillin,
 ### Better lighting to see all components
 ![Components](https://imgur.com/WQu0Bfb.jpg "Components")
 
+### Video
 [Link to video of what Ben saw!](https://twitter.com/AlphaTeal/status/1101280600932134912) I probably should have had the lights off in this video for better effect though...
