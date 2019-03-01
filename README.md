@@ -24,3 +24,10 @@ The system was deployed on 2019-02-28 at approximately 1:00 AM. Ben entered his 
 In the wise words of Ben McMillin,
 
 > "FUCK!"
+
+## Photos and video
+![DrakeBot in action](https://imgur.com/ikR37Ho)
+### DrakeBot in action, after triggering
+![Components](https://imgur.com/WQu0Bfb)
+### Better lighting to see all components
+[Link to video of what Ben saw!](https://twitter.com/AlphaTeal/status/1101280600932134912) I probably should have had the lights off in this video for better effect though...
